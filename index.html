@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
 <title>Hearth &amp; Hoard · Board Games, D&amp;D &amp; Slab Pizza · Yorkton, SK</title>
 <meta name="description" content="Yorkton's board game and D&amp;D tavern. Hundreds of games, a private Dungeon for campaigns, and hot slab pizza by the cut. 37 Broadway St E, Yorkton, Saskatchewan.">
 <meta property="og:title" content="Hearth &amp; Hoard · Yorkton's board game tavern">
@@ -29,7 +30,8 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--parch);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:var(--ember-text)} a:hover{color:#7E2716}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+:root{color-scheme:light}
 .eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--ember-text);margin:0 0 10px}
 h1,h2,h3{font-family:var(--serif);line-height:1.05;margin:0}
 h2{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.01em}
@@ -40,7 +42,8 @@ h2{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.01em}
 .btn-ink{background:var(--ink);color:var(--parch)} .btn-ink:hover{background:var(--ink-2);color:var(--parch)}
 
 /* header */
-.top{position:sticky;top:0;z-index:10;background:rgba(29,26,38,.96);color:var(--parch);border-bottom:1px solid var(--line-dark)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:11;background:var(--ink)}
+.top{position:sticky;top:env(safe-area-inset-top, 0px);z-index:10;background:rgba(29,26,38,.96);color:var(--parch);border-bottom:1px solid var(--line-dark)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;color:var(--parch);text-decoration:none;font-family:var(--serif);font-weight:800;font-size:22px}
 .brand:hover{color:var(--parch)}
@@ -51,8 +54,8 @@ h2{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.01em}
 
 /* hero */
 .hero{position:relative;background:var(--ink);color:var(--parch);overflow:hidden}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,26,38,.95) 0%,rgba(29,26,38,.7) 45%,rgba(29,26,38,.15) 100%)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,26,38,.95) 0%,rgba(29,26,38,.78) 42%,rgba(29,26,38,.1) 100%)}
 .hero .wrap{position:relative;z-index:1;padding-top:clamp(80px,14vw,160px);padding-bottom:clamp(80px,12vw,140px)}
 .hero .eyebrow{color:var(--gold)}
 .hero h1{font-size:clamp(48px,8.5vw,104px);font-weight:800;letter-spacing:-.02em;max-width:11ch}
@@ -118,8 +121,23 @@ section{padding:clamp(64px,9vw,112px) 0}
 .visit dl{margin:24px 0 0;display:grid;grid-template-columns:110px 1fr;gap:10px 16px}
 .visit dt{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember-text);padding-top:3px}
 .visit dd{margin:0}
-.map{border:1.5px solid var(--line);border-radius:12px;overflow:hidden;min-height:360px;background:var(--paper)}
-.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+.storefront{margin:0;display:flex;flex-direction:column;gap:12px;min-width:0}
+.storefront img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;border:1.5px solid var(--line)}
+.storefront figcaption{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+
+/* gallery */
+.gallery-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 32px;flex-wrap:wrap;margin-bottom:32px}
+.gallery-head p{max-width:42ch;margin:0;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.gallery figure{margin:0;position:relative;border-radius:10px;overflow:hidden;background:var(--ink);min-width:0}
+.gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9;transition:transform .5s ease}
+.gallery figure:hover img{transform:scale(1.03)}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:28px 16px 12px;color:var(--parch);font-size:15px;font-weight:500;background:linear-gradient(transparent,rgba(21,18,28,.88))}
+.gallery figcaption b{display:block;font-family:var(--serif);font-size:20px;font-weight:600}
+.g-wide{grid-column:span 4}.g-tall{grid-column:span 2}.g-half{grid-column:span 3}
+.g-tall img{aspect-ratio:auto;height:100%}
+@media (max-width:800px){.gallery{grid-template-columns:1fr}.g-wide,.g-tall,.g-half{grid-column:auto}.g-tall img{aspect-ratio:16/9}}
+@media (prefers-reduced-motion:reduce){.gallery img{transition:none}html{scroll-behavior:auto}}
 
 /* news */
 .news{text-align:center}
@@ -141,6 +159,7 @@ footer a{color:var(--gold)}
     </a>
     <nav class="nav" aria-label="Main">
       <a href="#tavern">The tavern</a>
+      <a href="#gallery">Inside</a>
       <a href="#provisions">Provisions</a>
       <a href="#quests">Quest Board</a>
       <a href="#dungeon">The Dungeon</a>
@@ -151,7 +170,7 @@ footer a{color:var(--gold)}
 
 <main id="top">
   <section class="hero" style="padding:0">
-    <img src="assets/interior.webp" alt="Concept of the tavern interior: a pressed-tin ceiling, a wall of board games, pendant-lit tables and a glowing pizza counter at the back" width="1600" height="900">
+    <img src="assets/hall.webp" alt="The Great Hall: a pressed-tin ceiling, a wall of board games, players at long tables and a glass case of slab pizza" width="1599" height="893">
     <div class="wrap">
       <p class="eyebrow">Coming to Broadway · Yorkton, SK</p>
       <h1>You all meet in a <span class="amp">tavern.</span></h1>
@@ -196,6 +215,24 @@ footer a{color:var(--gold)}
           <h3>Gather</h3>
           <p>Birthdays, leagues, date nights and team outings. Long tables seat twelve.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="gallery-head">
+        <div>
+          <p class="eyebrow">Inside the tavern</p>
+          <h2>Pull up a chair</h2>
+        </div>
+        <p>A first look at 37 Broadway, keeping the 1912 tin ceiling and maple floors. Concept images; the finished space may differ.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-wide"><img src="assets/counter-view.webp" alt="The Great Hall looking toward the counter, the game wall on the right and the Quest Board chalkboard" width="1599" height="893" loading="lazy"><figcaption><b>The Great Hall</b>Long tables, the Hoard wall and the Quest Board</figcaption></figure>
+        <figure class="g-tall"><img src="assets/dungeon.webp" alt="A D&amp;D campaign in progress, seen through the Dungeon doors" width="1024" height="572" loading="lazy"><figcaption><b>The Dungeon</b>Campaign night</figcaption></figure>
+        <figure class="g-half"><img src="assets/provisions.webp" alt="The counter with a glass case of slab pizzas in steel trays, the espresso machine and the Dungeon door" width="1599" height="893" loading="lazy"><figcaption><b>Provisions counter</b>Slabs cut to order, hot from the case</figcaption></figure>
+        <figure class="g-half"><img src="assets/hall.webp" alt="Players at tables along the game wall, with the front windows looking out to the park" width="1599" height="893" loading="lazy"><figcaption><b>Window to the park</b>Looking out to City Centre Park</figcaption></figure>
       </div>
     </div>
   </section>
@@ -291,9 +328,10 @@ footer a{color:var(--gold)}
           <dt>Follow</dt><dd><a href="https://instagram.com/">@[instagram]</a></dd>
         </dl>
       </div>
-      <div class="map">
-        <iframe title="Map of 37 Broadway Street East, Yorkton" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-102.4650%2C51.2082%2C-102.4555%2C51.2124&amp;layer=mapnik&amp;marker=51.2103173%2C-102.4602445"></iframe>
-      </div>
+      <figure class="storefront">
+        <img src="assets/storefront.webp" alt="The Hearth &amp; Hoard storefront on Broadway: a black sign with gold letters, the gold lizard sculpture and a sandwich board announcing today's quest" width="1599" height="893" loading="lazy">
+        <figcaption><span>Look for the gold dragon on the red building.</span><a href="https://www.google.com/maps/search/?api=1&amp;query=37+Broadway+St+E+Yorkton+SK">Get directions</a></figcaption>
+      </figure>
     </div>
   </section>
 
