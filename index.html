@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hearth &amp; Hoard · Board Games, D&amp;D &amp; Slab Pizza · Yorkton, SK</title>
+<meta name="description" content="Yorkton's board game and D&amp;D tavern. Hundreds of games, a private Dungeon for campaigns, and hot slab pizza by the cut. 37 Broadway St E, Yorkton, Saskatchewan.">
+<meta property="og:title" content="Hearth &amp; Hoard · Yorkton's board game tavern">
+<meta property="og:description" content="You all meet in a tavern. Board games, D&amp;D and slab pizza on Broadway Street.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#1D1A26">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Hearth & Hoard","servesCuisine":"Pizza","description":"Board game and D&D tavern with slab pizza","address":{"@type":"PostalAddress","streetAddress":"37 Broadway St E","addressLocality":"Yorkton","addressRegion":"SK","postalCode":"S3N 0K4","addressCountry":"CA"},"geo":{"@type":"GeoCoordinates","latitude":51.2103173,"longitude":-102.4602445}}
+</script>
+<style>
+:root{
+  --ink:#1D1A26; --ink-2:#2A2535; --line-dark:#3A3446;
+  --parch:#F3E9D6; --paper:#FBF5EA; --line:#D9C9A8;
+  --ember:#C8452B; --ember-text:#A8361F; --gold:#E2A72E; --copper:#9A5B34; --park:#4E6B4A;
+  --muted:#4A4453; --muted-dark:#CFC4AE;
+  --serif:'Fraunces', Georgia, serif; --sans:'DM Sans', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--parch);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--ember-text)} a:hover{color:#7E2716}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:13px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--ember-text);margin:0 0 10px}
+h1,h2,h3{font-family:var(--serif);line-height:1.05;margin:0}
+h2{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.01em}
+.amp{font-style:italic;font-weight:500;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px}
+.btn-gold{background:var(--gold);color:var(--ink)} .btn-gold:hover{background:#F0BA49;color:var(--ink)}
+.btn-ghost{border:2px solid var(--parch);color:var(--parch)} .btn-ghost:hover{background:var(--parch);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--parch)} .btn-ink:hover{background:var(--ink-2);color:var(--parch)}
+
+/* header */
+.top{position:sticky;top:0;z-index:10;background:rgba(29,26,38,.96);color:var(--parch);border-bottom:1px solid var(--line-dark)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--parch);text-decoration:none;font-family:var(--serif);font-weight:800;font-size:22px}
+.brand:hover{color:var(--parch)}
+.nav{display:flex;gap:4px;flex-wrap:wrap}
+.nav a{color:var(--muted-dark);text-decoration:none;font-size:15px;font-weight:500;padding:10px 12px;border-radius:8px}
+.nav a:hover{color:var(--gold);background:var(--ink-2)}
+@media (max-width:760px){.nav{display:none}}
+
+/* hero */
+.hero{position:relative;background:var(--ink);color:var(--parch);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(29,26,38,.95) 0%,rgba(29,26,38,.7) 45%,rgba(29,26,38,.15) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-top:clamp(80px,14vw,160px);padding-bottom:clamp(80px,12vw,140px)}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(48px,8.5vw,104px);font-weight:800;letter-spacing:-.02em;max-width:11ch}
+.hero p.lede{font-size:clamp(18px,2.2vw,22px);max-width:34ch;color:var(--muted-dark);margin:22px 0 32px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero .cap{position:absolute;right:16px;bottom:12px;z-index:1;font-size:12px;color:#A79FB3}
+
+/* strip */
+.strip{background:var(--ember);color:var(--paper)}
+.strip .wrap{display:flex;justify-content:center;gap:12px 36px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:14px}
+
+section{padding:clamp(64px,9vw,112px) 0}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end}
+.intro p{font-size:19px;margin:0}
+@media (max-width:800px){.intro{grid-template-columns:1fr;gap:20px}}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}
+@media (max-width:960px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:24px}
+.card h3{font-size:26px;font-weight:600;margin-bottom:8px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.card svg{margin-bottom:16px}
+
+/* menu */
+.dark{background:var(--ink);color:var(--parch)}
+.dark .eyebrow{color:var(--gold)}
+.menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-bottom:2px solid var(--copper);padding-bottom:20px;margin-bottom:36px}
+.fee{font-family:var(--serif);font-size:22px}
+.fee small{display:block;font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.menu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+@media (max-width:900px){.menu{grid-template-columns:1fr;gap:36px}}
+.menu h3{font-size:30px;color:var(--gold)}
+.menu .sub{font-size:14px;color:var(--muted-dark);margin:4px 0 18px}
+.item{margin-bottom:16px}
+.item .row{display:flex;justify-content:space-between;gap:12px;font-weight:700;font-size:18px}
+.item p{margin:2px 0 0;font-size:15px;color:var(--muted-dark)}
+.tag{font-size:11px;letter-spacing:.12em;color:#9DBF94;margin-left:6px}
+.platter{background:var(--ember);border-radius:8px;padding:18px 20px;margin-top:8px}
+.platter b{font-size:13px;letter-spacing:.2em}
+
+/* quests */
+.quests{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+@media (max-width:900px){.quests{grid-template-columns:1fr;gap:28px}}
+.week{list-style:none;margin:0;padding:0;border-top:1.5px solid var(--line)}
+.week li{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:16px 0;border-bottom:1.5px solid var(--line)}
+.week b.day{font-family:var(--serif);color:var(--ember-text);font-size:20px}
+.week span{font-size:17px}
+.week .off{color:var(--muted)}
+
+/* dungeon */
+.dungeon{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media (max-width:900px){.dungeon{grid-template-columns:1fr}}
+.dungeon .panel{background:var(--ink-2);border:1px solid var(--line-dark);border-radius:12px;padding:28px}
+.dungeon ul{margin:0;padding-left:20px;color:var(--muted-dark)}
+.dungeon li{margin-bottom:8px}
+.pattern{height:28px;background:
+  linear-gradient(135deg,transparent 42%,var(--copper) 42% 48%,transparent 48%) 0 0/28px 28px,
+  linear-gradient(45deg,transparent 42%,var(--copper) 42% 48%,transparent 48%) 0 0/28px 28px,var(--ink)}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1.3fr;gap:40px}
+@media (max-width:900px){.visit{grid-template-columns:1fr}}
+.visit dl{margin:24px 0 0;display:grid;grid-template-columns:110px 1fr;gap:10px 16px}
+.visit dt{font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember-text);padding-top:3px}
+.visit dd{margin:0}
+.map{border:1.5px solid var(--line);border-radius:12px;overflow:hidden;min-height:360px;background:var(--paper)}
+.map iframe{width:100%;height:100%;min-height:360px;border:0;display:block}
+
+/* news */
+.news{text-align:center}
+.news h2{margin-bottom:12px}
+.news p{max-width:44ch;margin:0 auto 28px;color:var(--muted-dark);font-size:18px}
+
+footer{background:#15121C;color:#A79FB3;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hearth and Hoard, home">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><g fill="none" stroke="#E2A72E" stroke-width="5" stroke-linejoin="round"><polygon points="50,6 88.1,28 88.1,72 50,94 11.9,72 11.9,28"/><polygon points="50,22 74,64 26,64"/></g><path d="M50 34 C56 41 60 46 58.5 53 C57.5 58 54 60.5 50 60.5 C45.5 60.5 41.5 57.5 41.5 52.5 C41.5 48 45 45.5 46.5 41 C48.5 44 49.5 46 51.5 47.5 C52 43 51.5 38.5 50 34 Z" fill="#C8452B"/></svg>
+      <span>Hearth <span class="amp">&amp;</span> Hoard</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#tavern">The tavern</a>
+      <a href="#provisions">Provisions</a>
+      <a href="#quests">Quest Board</a>
+      <a href="#dungeon">The Dungeon</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <img src="assets/interior.webp" alt="Concept of the tavern interior: a pressed-tin ceiling, a wall of board games, pendant-lit tables and a glowing pizza counter at the back" width="1600" height="900">
+    <div class="wrap">
+      <p class="eyebrow">Coming to Broadway · Yorkton, SK</p>
+      <h1>You all meet in a <span class="amp">tavern.</span></h1>
+      <p class="lede">Board games, Dungeons &amp; Dragons and hot slab pizza in a 1912 storefront across from City Centre Park.</p>
+      <div class="ctas">
+        <a class="btn btn-gold" href="#news">Get opening news</a>
+        <a class="btn btn-ghost" href="#dungeon">Book the Dungeon</a>
+      </div>
+    </div>
+    <span class="cap">Interior concept</span>
+  </section>
+
+  <div class="strip" role="presentation"><div class="wrap"><span>Board games</span><span>D&amp;D</span><span>Slab pizza</span><span>Potions</span></div></div>
+
+  <section id="tavern">
+    <div class="wrap">
+      <div class="intro">
+        <div>
+          <p class="eyebrow">The tavern</p>
+          <h2>Roll in from the cold.</h2>
+        </div>
+        <p>A warm, all-ages game hall with a wall of games to borrow, Game Guides who’ll teach you any of them, and pizza you can eat without stopping play. Never played? Perfect. Pull up a chair.</p>
+      </div>
+      <div class="pillars">
+        <div class="card">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8452B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.2" fill="#C8452B"/><circle cx="15.5" cy="15.5" r="1.2" fill="#C8452B"/><circle cx="12" cy="12" r="1.2" fill="#C8452B"/></svg>
+          <h3>Play</h3>
+          <p>Hundreds of games on the Hoard wall. One flat fee, play as long as you like.</p>
+        </div>
+        <div class="card">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8452B" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><polygon points="12,2 21,7 21,17 12,22 3,17 3,7"/><polygon points="12,6 17,15 7,15"/></svg>
+          <h3>Quest</h3>
+          <p>Learn-to-play nights, one-shots and a private room for your campaign.</p>
+        </div>
+        <div class="card">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8452B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 3.5 5 6 4.2 9.5C15.7 15 14 16 12 16s-4-1.5-4-4c0-2.3 1.7-3.5 2.4-5.6 1 1.4 1.4 2.4 2.3 3.1.3-2 0-3.8-.7-6.5z"/><path d="M5 20h14"/></svg>
+          <h3>Feast</h3>
+          <p>Roman-style slab pizza, cut to order and kept hot in the case. Sweet slabs too.</p>
+        </div>
+        <div class="card">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8452B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M14.5 14.2A6 6 0 0 1 22 20"/></svg>
+          <h3>Gather</h3>
+          <p>Birthdays, leagues, date nights and team outings. Long tables seat twelve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="provisions" class="dark">
+    <div class="wrap">
+      <div class="menu-head">
+        <div>
+          <p class="eyebrow">Menu</p>
+          <h2>Provisions</h2>
+        </div>
+        <p class="fee"><small>Adventurer’s fee</small>[$] per person · play all day</p>
+      </div>
+      <div class="menu">
+        <div>
+          <h3>Slabs</h3>
+          <p class="sub">Roman-style pizza baked in long trays, cut to order</p>
+          <div class="item"><div class="row"><span>The Natural 20</span><span>[$]</span></div><p>Tomato, fior di latte, basil. The perfect roll.</p></div>
+          <div class="item"><div class="row"><span>Baba’s Perogy</span><span>[$]</span></div><p>Potato, cheddar, bacon, green onion, sour cream. Yorkton on a slab.</p></div>
+          <div class="item"><div class="row"><span>Dragon’s Breath</span><span>[$]</span></div><p>Spicy salami, chili, hot honey.</p></div>
+          <div class="item"><div class="row"><span>The Druid <span class="tag">VEG</span></span><span>[$]</span></div><p>Roasted mushrooms, kale, garlic confit, mozzarella.</p></div>
+          <div class="item"><div class="row"><span>The Mimic</span><span>[$]</span></div><p>Today’s surprise slab. Ask your Game Guide.</p></div>
+        </div>
+        <div>
+          <h3>Sweet slabs</h3>
+          <p class="sub">From the same case, all day</p>
+          <div class="item"><div class="row"><span>Scroll of Cinnamon</span><span>[$]</span></div><p>Pull-apart cinnamon swirl, cream-cheese glaze.</p></div>
+          <div class="item"><div class="row"><span>Saskatoon Crumble</span><span>[$]</span></div><p>Prairie saskatoon berries, oat crumble.</p></div>
+          <div class="item"><div class="row"><span>Dragon Hoard</span><span>[$]</span></div><p>Chocolate, hazelnut, gold sprinkles.</p></div>
+          <div class="platter"><b>PARTY PLATTER</b><p style="margin:4px 0 0">A full tray, cut 24 ways, for birthdays and campaign nights. Order a day ahead.</p></div>
+        </div>
+        <div>
+          <h3>Potions</h3>
+          <p class="sub">Lids on near the games, please</p>
+          <div class="item"><div class="row"><span>Espresso bar</span><span>[$]</span></div><p>Espresso, latte, cappuccino.</p></div>
+          <div class="item"><div class="row"><span>Mana Potion</span><span>[$]</span></div><p>Butterfly-pea lemonade that turns purple.</p></div>
+          <div class="item"><div class="row"><span>Health Potion</span><span>[$]</span></div><p>Hibiscus, berry and mint iced tea.</p></div>
+          <div class="item"><div class="row"><span>Hearthfire Cocoa</span><span>[$]</span></div><p>Thick hot chocolate, toasted marshmallow.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quests">
+    <div class="wrap quests">
+      <div>
+        <p class="eyebrow">The Quest Board</p>
+        <h2>A week at the tavern</h2>
+        <p style="font-size:18px;color:var(--muted);margin:18px 0 0">Seasonal quests too: a Film Festival game night, winter leagues, and a summer game day in City Centre Park.</p>
+      </div>
+      <ul class="week">
+        <li><b class="day">Mon</b><span class="off">Closed · the Guides rest</span></li>
+        <li><b class="day">Tue</b><span><b>First Roll</b> · learn-to-play D&amp;D, dice provided</span></li>
+        <li><b class="day">Wed</b><span><b>Campaign Night</b> · the Dungeon and long tables</span></li>
+        <li><b class="day">Thu</b><span><b>Strategy League</b> · Catan, Ticket to Ride, Wingspan</span></li>
+        <li><b class="day">Fri</b><span><b>Date Night</b> · two-player games, slab for two</span></li>
+        <li><b class="day">Sat</b><span><b>Family Day</b> to 5 pm, then open play late</span></li>
+        <li><b class="day">Sun</b><span><b>Paint &amp; Play</b> · mini painting, cinnamon slabs, coffee</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="pattern" role="presentation"></div>
+  <section id="dungeon" class="dark">
+    <div class="wrap dungeon">
+      <div>
+        <p class="eyebrow">Private room</p>
+        <h2>Book the Dungeon</h2>
+        <p style="font-size:18px;color:var(--muted-dark);margin:18px 0 28px">A closed room for up to ten adventurers, with dimmable light and a locker to keep your campaign between sessions. Bring your own DM or hire one of ours.</p>
+        <a class="btn btn-gold" href="mailto:[EMAIL]?subject=Dungeon%20booking">Request a booking</a>
+      </div>
+      <div class="panel">
+        <h3 style="font-size:24px;margin-bottom:14px">Also bookable</h3>
+        <ul>
+          <li>Birthday parties with a Game Guide and a party platter</li>
+          <li>Team-building and staff nights</li>
+          <li>School and club groups</li>
+          <li>One-shot adventures run by a house Dungeon Master</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap visit">
+      <div>
+        <p class="eyebrow">Visit</p>
+        <h2>On Broadway, across from the park</h2>
+        <dl>
+          <dt>Address</dt><dd>37 Broadway Street East<br>Yorkton, SK S3N 0K4</dd>
+          <dt>Hours</dt><dd>Tuesday to Sunday · [hours to confirm]</dd>
+          <dt>Contact</dt><dd><a href="mailto:[EMAIL]">[EMAIL]</a> · [PHONE]</dd>
+          <dt>Follow</dt><dd><a href="https://instagram.com/">@[instagram]</a></dd>
+        </dl>
+      </div>
+      <div class="map">
+        <iframe title="Map of 37 Broadway Street East, Yorkton" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-102.4650%2C51.2082%2C-102.4555%2C51.2124&amp;layer=mapnik&amp;marker=51.2103173%2C-102.4602445"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="dark news">
+    <div class="wrap">
+      <p class="eyebrow">Opening [season] 2027</p>
+      <h2>Save your seat at the table</h2>
+      <p>Be first to hear the opening date, founding Guild memberships and the first campaign sign-ups.</p>
+      <a class="btn btn-gold" href="mailto:[EMAIL]?subject=Keep%20me%20posted">Keep me posted</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hearth &amp; Hoard · 37 Broadway St E, Yorkton, Saskatchewan</span>
+    <span>Every adventure starts in a tavern. · Brand &amp; site by <a href="https://instagram.com/salar.art">@salar.art</a></span>
+  </div>
+</footer>
+</body>
+</html>
